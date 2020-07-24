@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css grid</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-areas: 'box1 box1 box1 box1''box2 box2 box2 box3''box4 box4 box4 box4';
+            grid-gap: 1rem;
+            animation-name: box;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 4;
+
+        }
+        @keyframes box1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .box {
+            background-color: yellow;
+            border: 3px solid seashell;
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+            outline: 2px solid blue;
+        }
+        .box:hover {
+            background-color: rgb(83, 83, 16);
+            border: 3px solid blue;
+            color: white;
+        }
+        .box:nth-child(1) {
+            grid-area: box1;
+        }
+        .box:nth-child(2) {
+            grid-area: box2;
+        }
+        .box:nth-child(3) {
+            grid-area: box3;
+        }
+        .box:nth-child(4) {
+            grid-area: box4;
+        }
+        #btn {
+            position: fixed;
+            top: 25%;
+            left: 25%;
+            padding: 20px 30px;
+            color: red;
+            opacity: 0.6;
+        }
+        #btn::before {
+            content: "";
+            opacity: 0.6;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">Home&nbsp;&nbsp;About us&nbsp;&nbsp;Services&nbsp;&nbsp;Help</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, soluta velit fugiat eum laborum commodi aliquam quibusdam reprehenderit illo illum totam necessitatibus quasi aliquid dolore architecto facere accusamus ex in. Qui modi fugit obcaecati earum neque libero ratione temporibus consequatur exercitationem eius pariatur et minima error minus excepturi nihil, magni voluptates voluptatibus commodi ab dolor vel sed, labore iusto! Accusantium voluptate quos deleniti ullam adipisci, exercitationem, odio doloremque harum vero dicta nostrum vitae aliquid quaerat nam maiores laboriosam omnis pariatur eveniet eos. Maiores id fuga maxime ut hic doloribus a praesentium omnis, temporibus impedit, quia voluptates eius similique dolorem consequuntur obcaecati quam vel cum, quas rerum! Dolor cum nostrum neque commodi temporibus rem voluptatibus ut laborum recusandae! Enim corrupti maxime aperiam saepe dignissimos dolorum eos, maiores, eveniet reiciendis neque consequuntur hic aliquam. Adipisci, ex rem similique perferendis quaerat placeat incidunt quos maiores, temporibus saepe natus in nulla eaque mollitia error deleniti maxime quas eveniet soluta numquam cum aspernatur. Quas, eligendi perferendis pariatur dolorum magni facilis optio deserunt quae! Earum quae doloribus repellat consequatur unde adipisci architecto odit. Magni suscipit nisi minima omnis repellendus maxime animi officia optio nemo laudantium recusandae, facere, eius expedita. Ipsam, beatae molestiae, minus error vero necessitatibus ab, sunt iste excepturi sequi eum placeat. Magni, neque quis quae vel qui quas totam aliquam velit tenetur enim necessitatibus odio cupiditate recusandae nesciunt quasi ipsum corrupti cum aperiam illo harum dolorum. Voluptate error hic omnis? Consequuntur et deleniti cumque corrupti est quam a vitae, totam fugiat pariatur ullam ad natus dicta atque quibusdam? Est velit fugit ducimus corrupti excepturi id sapiente error, dignissimos doloribus libero praesentium consectetur vitae reiciendis. Aut libero ut culpa similique perspiciatis rerum qui nisi ea magni, porro pariatur explicabo consectetur! Dicta, perferendis dolores? Nulla voluptatem blanditiis doloribus perspiciatis. Recusandae assumenda provident nam incidunt nesciunt aperiam rerum cumque ab distinctio explicabo, excepturi omnis at nobis inventore sapiente! Consequuntur fugiat beatae asperiores quas odio qui quidem fugit quos, magnam molestiae aspernatur earum nihil expedita tempora placeat nobis maiores. Veritatis iusto ratione quae perferendis amet tempore et velit sunt facere, est, officia accusantium inventore. At voluptatem, nisi, corrupti quibusdam dicta quod assumenda, quae asperiores sit recusandae quaerat expedita accusantium nam modi. Sunt ex sit perspiciatis libero pariatur ullam officiis inventore doloribus, ipsa asperiores placeat dignissimos aliquam dolorem repellendus necessitatibus amet delectus odio fuga? Nam ullam at accusantium! Consequatur explicabo ad fugiat dolores earum architecto alias impedit perspiciatis consequuntur.</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque labore at necessitatibus optio ea perspiciatis illum similique saepe voluptatem animi delectus fugit dolorum asperiores consequatur quasi rerum sed rem, praesentium, culpa facere. Assumenda dolores eligendi, dolorum, recusandae minima cum iste cupiditate nam in enim porro repudiandae, delectus nobis. Ipsum quibusdam veritatis earum architecto culpa iste nostrum possimus voluptatibus! Corrupti modi quia accusantium hic officiis sequi rem labore aperiam neque amet enim itaque, fugiat minus architecto facilis. Possimus corrupti blanditiis qui reprehenderit error. Voluptatibus ducimus consectetur quae eaque reprehenderit, illum aspernatur neque iste totam modi repellendus aut dolor pariatur itaque quidem ullam explicabo omnis fugit. Libero, omnis. Facilis numquam sequi quaerat cumque, consequuntur ad iusto iure reprehenderit, labore, quod omnis non aspernatur harum aut obcaecati repellendus temporibus similique id aliquam quidem neque eligendi ducimus minima. Consequuntur natus cum saepe corporis aspernatur, beatae sed incidunt consectetur aut velit iusto aperiam sit ut laborum, accusamus iure. Possimus nemo, facere magnam ullam est beatae delectus eos velit quidem debitis, corporis veniam impedit consequuntur, tenetur distinctio quasi? Delectus eaque quidem, eveniet corrupti hic et, corporis magni sit ex cumque mollitia sed. Fuga, omnis ex expedita iste dolorum beatae doloremque itaque deserunt cumque perferendis minus corporis!</div>
+    
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, perferendis officiis similique pariatur voluptate labore ea ullam debitis eum error</div> 
+    </div>
+    <button id="btn" onclick="color()">Rotate</button>
+    <script>
+        function color(){
+            let container=document.getElementById("container");
+            if (container.style.animationName=="box"){
+            container.style.animationName="box1";
+            }
+            else {
+                container.style.animationName="box";
+            }
+        }
+    </script>
+</body>
+</html>
